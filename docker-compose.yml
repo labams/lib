@@ -1,0 +1,17 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: labams_npm
+        restart: always
+        working_dir: /app
+        tty: true
+        volumes:
+            - .:/app
+            - ~/.pnpm-store:/.pnpm-store
+        # command: ["pnpm", "start:dev"]
+        env_file:
+            - .env
+
+name: Labams
