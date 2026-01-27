@@ -7,7 +7,7 @@ import { defineConfig } from 'eslint/config';
 
 export const eslintConfig = defineConfig(
     {
-        ignores: ['eslint.config.mjs', 'dist', 'prettier.config.cjs'],
+        ignores: ['eslint.config.mjs', 'dist', 'prettier.config.cjs', 'prisma.config.ts'],
     },
     eslint.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
