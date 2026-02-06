@@ -11,7 +11,7 @@ export interface ServerToClientEvents {
   room_update: (data: RoomUpdatePayload) => void;
   user_joined: (data: UserJoinedPayload) => void;
   user_left: (data: UserLeftPayload) => void;
-  pong: () => void;
+  pong: (data: PongPayload) => void;
   error: (data: ErrorPayload) => void;
 }
 
@@ -81,6 +81,10 @@ export interface UserJoinedPayload {
 export interface UserLeftPayload {
   room_id: string;
   user_id: string;
+}
+
+export interface PongPayload {
+  timestamp: number;
 }
 
 export interface ErrorPayload {
