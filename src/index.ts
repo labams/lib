@@ -21,3 +21,6 @@ export * from './eslint/eslint.config';
 
 // prettier
 export * from './eslint/prettier';
+
+// sockets
+export * from './sockets';
