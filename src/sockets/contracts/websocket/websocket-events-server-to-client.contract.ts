@@ -1,4 +1,5 @@
 // WebSocket Events Contract - События от сервера и клиенту
+import type { RoomType } from '../../chats/types/room.types';
 export interface ServerToClientEvents {
     connected: (data: ConnectedPayload) => void;
     subscribed: (data: SubscribedPayload) => void;
@@ -70,7 +71,7 @@ export interface ParticipantStatus {
 export interface RoomUpdatePayload {
     room_id: string;
     action: 'created' | 'updated';
-    type: 'order' | 'support';
+    type: RoomType;
 }
 
 export interface UserJoinedPayload {
