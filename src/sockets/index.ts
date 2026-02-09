@@ -3,7 +3,6 @@ export * from './contracts/websocket/websocket-events-server-to-client.contract'
 export * from './contracts/websocket/websocket-events-client-to-server.contract';
 
 // RabbitMQ contracts (message broker events)
-export * from './contracts/rabbitmq/chat-events.contract';
 export * from './contracts/rabbitmq/user-events.contract';
 
 // Types & interfaces

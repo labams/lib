@@ -9,6 +9,7 @@ export * from './rmq-client/rmq.client';
 
 // rpc-clients
 export * from './rpc-clients/test.client';
+export * from './rpc-clients/chat.client';
 
 // types & interfaces
 export * from './types/jwt-payload.type';
@@ -24,3 +25,6 @@ export * from './eslint/prettier';
 
 // sockets
 export * from './sockets';
+
+// chats
+export * from './chats';
