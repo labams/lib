@@ -1,5 +1,5 @@
 // WebSocket Events Contract - События от сервера и клиенту
-import type { RoomType } from '../../chats/types/room.types';
+import type { RoomType } from '../../../chats';
 export interface ServerToClientEvents {
     connected: (data: ConnectedPayload) => void;
     subscribed: (data: SubscribedPayload) => void;
