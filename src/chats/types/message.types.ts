@@ -11,14 +11,6 @@ export interface IMessage {
 }
 
 /**
- * Сообщение с обезличенным отправителем (для техников)
- */
-export interface IAnonymizedMessage extends Omit<IMessage, 'sender_id'> {
-    sender_id: string;
-    sender_display_name: string;
-}
-
-/**
  * Запрос на отправку сообщения
  */
 export interface ISendMessagePayload {

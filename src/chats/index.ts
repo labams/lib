@@ -4,6 +4,9 @@ export * from './types/message.types';
 export * from './types/unread.types';
 export * from './types/redis-keys';
 
+// DTOs
+export * from './dto/index';
+
 // Event contracts
 export * from './contracts/events/chat-new-message.event';
 export * from './contracts/events/chat-message-read.event';
