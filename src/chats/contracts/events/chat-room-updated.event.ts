@@ -1,9 +1,10 @@
 import { IBaseEventContract } from '../../../contracts/events/base.event.';
-import type { IChatRoomParticipant } from '../../types/room.types';
+import type { IChatRoomParticipant, RoomStatus } from '../../types/room.types';
 
 export interface ChatRoomUpdatedData {
     room_id: string;
     action: 'updated';
+    status?: RoomStatus;
     participants?: IChatRoomParticipant[];
 }
 

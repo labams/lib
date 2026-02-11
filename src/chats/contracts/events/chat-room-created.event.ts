@@ -5,7 +5,7 @@ import type { IChatRoomParticipant } from '../../types/room.types';
 export interface ChatRoomCreatedData {
     room_id: string;
     type: RoomType;
-    order_id: string | null;
+    related_entity_id: string | null;
     participants: IChatRoomParticipant[];
 }
 
