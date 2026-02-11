@@ -14,9 +14,12 @@ export enum RoomType {
  * Статус комнаты
  */
 export enum RoomStatus {
-    ACTIVE = 'active',
-    ARCHIVED = 'archived',
-    CLOSED = 'closed',
+    ACTIVE = 'ACTIVE',
+    WAITING = 'WAITING', // Ожидание ответа (support — от оператора, order — от техника)
+    RESOLVED = 'RESOLVED', // Вопрос решён (support), можно переоткрыть
+    COMPLETED = 'COMPLETED', // Заказ завершён (order), чат read-only
+    ARCHIVED = 'ARCHIVED', // Архивирован (скрыт из списка)
+    CLOSED = 'CLOSED', // Закрыт окончательно
 }
 
 /**
@@ -33,9 +36,9 @@ export interface IChatRoomParticipant {
 export interface IChatRoom {
     id: string;
     type: RoomType;
-    order_id: string | null;
+    status: RoomStatus;
+    related_entity_id: string | null;
     participants: IChatRoomParticipant[];
-    is_active: boolean;
     last_message_at: string | null;
     created_at: string;
     updated_at: string;
@@ -47,8 +50,8 @@ export interface IChatRoom {
 export interface IChatRoomSummary {
     id: string;
     type: RoomType;
-    order_id: string | null;
-    is_active: boolean;
+    status: RoomStatus;
+    related_entity_id: string | null;
     last_message_at: string | null;
     unread_count: number;
     last_message?: ILastMessage | null;
@@ -69,7 +72,7 @@ export interface ILastMessage {
  */
 export interface ICreateRoomPayload {
     type: RoomType;
-    order_id?: string;
+    related_entity_id?: string;
     participant_ids?: string[];
 }
 
