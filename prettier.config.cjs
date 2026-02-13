@@ -1,3 +1,3 @@
-const { prettierConfig } = require('./dist/index.js');
+const { prettierConfig } = require('./dist/eslint/prettier.js');
 
 module.exports = prettierConfig;

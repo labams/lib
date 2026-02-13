@@ -18,12 +18,6 @@ export * from './types/jwt-payload.type';
 // decorators
 export * from './decorators/user.decorator';
 
-// eslint
-export * from './eslint/eslint.config';
-
-// prettier
-export * from './eslint/prettier';
-
 // sockets
 export * from './sockets';
 

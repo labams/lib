@@ -1,9 +1,23 @@
 {
     "name": "@labams/lib",
-    "version": "1.3.1",
+    "version": "1.3.2",
     "description": "библиотека для стоматологической платформы",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "./eslint": {
+            "types": "./dist/eslint/eslint.config.d.ts",
+            "default": "./dist/eslint/eslint.config.js"
+        },
+        "./prettier": {
+            "types": "./dist/eslint/prettier.d.ts",
+            "default": "./dist/eslint/prettier.js"
+        }
+    },
     "files": [
         "dist/**/*"
     ],
