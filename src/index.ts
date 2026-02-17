@@ -14,9 +14,11 @@ export * from './rpc-clients/order.client';
 
 // types & interfaces
 export * from './types/jwt-payload.type';
+export * from './types/user-role.enum';
 
 // decorators
 export * from './decorators/user.decorator';
+export * from './decorators/api-user-meta.decorator';
 
 // eslint
 export * from './eslint/eslint.config';
