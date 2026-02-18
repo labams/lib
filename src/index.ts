@@ -1,5 +1,6 @@
 // event contracts
 export * from './contracts/events/something-happened.event';
+export * from './contracts/events/auth.fingerprint.mismatch.event';
 
 // rpc contracts
 export * from './contracts/rpc/do-something.rpc';
