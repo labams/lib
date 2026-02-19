@@ -11,6 +11,7 @@ export * from './rmq-client/rmq.client';
 export * from './rpc-clients/test.client';
 export * from './rpc-clients/chat.client';
 export * from './rpc-clients/order.client';
+export * from './rpc-clients/notification.client';
 
 // types & interfaces
 export * from './types/jwt-payload.type';
@@ -32,3 +33,6 @@ export * from './chats';
 
 // orders
 export * from './orders';
+
+// notifications
+export * from './notifications';
