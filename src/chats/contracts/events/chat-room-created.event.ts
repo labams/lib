@@ -1,4 +1,4 @@
-import { IBaseEventContract } from '../../../contracts/events/base.event.';
+import { IBaseEventContract } from '../../../contracts/events/base.event';
 import type { RoomType } from '../../types/room.types';
 import type { IChatRoomParticipant } from '../../types/room.types';
 
