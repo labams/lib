@@ -6,7 +6,7 @@ type ReqType = {
         countryCode: string;
         isoCode: string;
     };
-    smsCode: string;
+    code: string;
 };
 
 export class AuthLoginPhoneCodeSentEventContract implements IBaseEventContract<ReqType> {
