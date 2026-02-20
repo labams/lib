@@ -1,4 +1,4 @@
-import { IBaseEventContract } from '../../../contracts/events/base.event.';
+import { IBaseEventContract } from '../../../contracts/events/base.event';
 
 export interface OrderStatusChangedData {
     order_id: string;

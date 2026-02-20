@@ -1,4 +1,4 @@
-import { IBaseEventContract } from '../../../contracts/events/base.event.';
+import { IBaseEventContract } from '../../../contracts/events/base.event';
 import type { IChatRoomParticipant, RoomStatus } from '../../types/room.types';
 
 export interface ChatRoomUpdatedData {

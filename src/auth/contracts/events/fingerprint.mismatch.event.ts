@@ -1,4 +1,4 @@
-import { IBaseEventContract } from './base.event.';
+import { IBaseEventContract } from '../../../contracts/events/base.event';
 
 type ReqType = {
     userId: string;

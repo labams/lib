@@ -1,5 +1,5 @@
 import { ClientProxy } from '@nestjs/microservices';
-import { IBaseEventContract } from '../contracts/events/base.event.';
+import { IBaseEventContract } from '../contracts/events/base.event';
 
 export class EventClient {
     static readonly serviceName = 'RABBIT';

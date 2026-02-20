@@ -1,4 +1,4 @@
-import { IBaseEventContract } from './base.event.';
+import { IBaseEventContract } from './base.event';
 
 type ReqType = {
     a: string;
