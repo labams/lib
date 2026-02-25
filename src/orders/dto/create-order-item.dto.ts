@@ -7,11 +7,17 @@ import {
     IsArray,
     Min,
     ArrayMinSize,
+    IsNumber,
 } from 'class-validator';
 
 export class CreateOrderItemDto {
+    @ApiProperty({ description: 'Номер позиции' })
+    @IsInt()
+    @Min(1)
+    positionNumber: number;
+
     @ApiProperty({ description: 'ID типа конструкции' })
-    @IsUUID()
+    @IsString()
     constructionTypeId: string;
 
     @ApiPropertyOptional({ description: 'ID материала' })
@@ -40,11 +46,15 @@ export class CreateOrderItemDto {
     @IsInt({ each: true })
     teethNumbers: number[];
 
-    @ApiPropertyOptional({ description: 'Количество единиц', default: 1 })
-    @IsOptional()
+    @ApiProperty({ description: 'Количество единиц', default: 1 })
     @IsInt()
     @Min(1)
-    unitsCount?: number;
+    unitsCount: number;
+
+    @ApiProperty({ description: 'Цена за единицу' })
+    @IsNumber()
+    @Min(0)
+    unitPrice: number;
 
     @ApiPropertyOptional({ description: 'Тип фиксации' })
     @IsOptional()
