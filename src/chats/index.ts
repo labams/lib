@@ -10,6 +10,8 @@ export * from './dto/index';
 // Event contracts
 export * from './contracts/events/chat-new-message.event';
 export * from './contracts/events/chat-message-read.event';
+export * from './contracts/events/chat-message-edited.event';
+export * from './contracts/events/chat-message-deleted.event';
 export * from './contracts/events/chat-room-created.event';
 export * from './contracts/events/chat-room-updated.event';
 export * from './contracts/events/chat-event.types';
