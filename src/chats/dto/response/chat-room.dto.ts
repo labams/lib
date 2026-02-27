@@ -11,7 +11,14 @@ export class ChatRoomResponseDto {
 
     @ApiProperty({
         description: 'Статус комнаты',
-        enum: ['ACTIVE', 'WAITING', 'RESOLVED', 'COMPLETED', 'ARCHIVED', 'CLOSED'],
+        enum: [
+            'ACTIVE',
+            'WAITING',
+            'RESOLVED',
+            'COMPLETED',
+            'ARCHIVED',
+            'CLOSED',
+        ],
     })
     status: string;
 
@@ -19,6 +26,14 @@ export class ChatRoomResponseDto {
         description: 'ID связанной сущности (order_id и т.д.)',
     })
     relatedEntityId: string | null;
+
+    @ApiPropertyOptional({ description: 'URL изображения аватара' })
+    avatarUrl?: string | null;
+
+    @ApiPropertyOptional({
+        description: 'Цвет аватара в формате HEX (#RRGGBB)',
+    })
+    avatarColor?: string | null;
 
     @ApiPropertyOptional({ description: 'Дата последнего сообщения' })
     lastMessageAt: Date | null;
@@ -49,7 +64,14 @@ export class RoomsListResponseDto {
 export class RoomStatusResponseDto {
     @ApiProperty({
         description: 'Статус комнаты',
-        enum: ['ACTIVE', 'WAITING', 'RESOLVED', 'COMPLETED', 'ARCHIVED', 'CLOSED'],
+        enum: [
+            'ACTIVE',
+            'WAITING',
+            'RESOLVED',
+            'COMPLETED',
+            'ARCHIVED',
+            'CLOSED',
+        ],
     })
     status: string;
 
