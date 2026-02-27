@@ -6,6 +6,8 @@ export interface ChatNewMessageData {
     sender_id: string;
     content: string;
     created_at: string;
+    reply_to_id?: string;
+    forwarded_from_id?: string;
 }
 
 export class ChatNewMessageEventContract implements IBaseEventContract<ChatNewMessageData> {
