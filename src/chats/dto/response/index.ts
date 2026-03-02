@@ -1,11 +1,6 @@
-export {
-    ChatParticipantResponseDto,
-} from './chat-participant.dto';
+export { ChatParticipantResponseDto } from './chat-participant.dto';
 
-export {
-    MessageResponseDto,
-    MessagesListResponseDto,
-} from './message.dto';
+export { MessageResponseDto, MessagesListResponseDto } from './message.dto';
 
 export {
     ChatRoomResponseDto,
@@ -15,7 +10,6 @@ export {
     SupportRoomCreatedResponseDto,
 } from './chat-room.dto';
 
-export {
-    UnreadCountResponseDto,
-    ReadAllResponseDto,
-} from './unread.dto';
+export { UnreadCountResponseDto, ReadAllResponseDto } from './unread.dto';
+
+export { ChatFolderResponseDto } from './chat-folder.dto';

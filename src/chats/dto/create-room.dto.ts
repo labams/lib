@@ -1,13 +1,34 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
+import { Type } from 'class-transformer';
 import {
+    IsArray,
     IsEnum,
     IsNotEmpty,
     IsOptional,
     IsString,
     IsUUID,
     MaxLength,
+    ValidateNested,
 } from 'class-validator';
 import { RoomType } from '../types/room.types';
+
+export class CreateRoomParticipantDto {
+    @ApiProperty({
+        description: 'ID пользователя',
+        example: '550e8400-e29b-41d4-a716-446655440000',
+    })
+    @IsUUID()
+    @IsNotEmpty()
+    user_id: string;
+
+    @ApiProperty({
+        description: 'Роль пользователя (DOCTOR, DL_TECHNICIAN, DL_ADMIN, CLINIC_ADMIN, SUPPORT)',
+        example: 'DOCTOR',
+    })
+    @IsString()
+    @IsNotEmpty()
+    role: string;
+}
 
 export class CreateRoomDto {
     @ApiProperty({
@@ -27,14 +48,14 @@ export class CreateRoomDto {
     @IsUUID()
     related_entity_id?: string;
 
-    @ApiPropertyOptional({
-        description:
-            'ID второго участника (order — техник, support — оператор)',
-        example: '550e8400-e29b-41d4-a716-446655440001',
+    @ApiProperty({
+        description: 'Список участников чата',
+        type: [CreateRoomParticipantDto],
     })
-    @IsOptional()
-    @IsUUID()
-    participant_id?: string;
+    @IsArray()
+    @ValidateNested({ each: true })
+    @Type(() => CreateRoomParticipantDto)
+    participants: CreateRoomParticipantDto[];
 
     @ApiPropertyOptional({
         description: 'Описание обращения (для type=SUPPORT)',

@@ -3,7 +3,7 @@ import type { IChatRoomParticipant, RoomStatus } from '../../types/room.types';
 
 export interface ChatRoomUpdatedData {
     room_id: string;
-    action: 'updated';
+    action: 'updated' | 'participant_added' | 'participant_removed';
     status?: RoomStatus;
     participants?: IChatRoomParticipant[];
 }
