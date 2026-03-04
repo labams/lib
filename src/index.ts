@@ -12,6 +12,7 @@ export * from './rpc-clients/test.client';
 export * from './rpc-clients/chat.client';
 export * from './rpc-clients/order.client';
 export * from './rpc-clients/notification.client';
+export * from './rpc-clients/profile.client';
 
 // types & interfaces
 export * from './types/jwt-payload.type';
@@ -41,3 +42,6 @@ export * from './notifications';
 
 // auth
 export * from './auth';
+
+// profiles
+export * from './profiles';
