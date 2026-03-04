@@ -1,6 +1,7 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
 import {
     IsBoolean,
+    IsEnum,
     IsInt,
     IsOptional,
     IsString,
@@ -8,6 +9,7 @@ import {
     Min,
 } from 'class-validator';
 import { Transform, Type } from 'class-transformer';
+import { UserRole } from '../types/user.types';
 
 export class GetUsersQueryDto {
     @ApiPropertyOptional({ description: 'ID организации' })
@@ -15,10 +17,10 @@ export class GetUsersQueryDto {
     @IsString()
     organizationId?: string;
 
-    @ApiPropertyOptional({ description: 'Slug роли' })
+    @ApiPropertyOptional({ description: 'Роль пользователя', enum: UserRole })
     @IsOptional()
-    @IsString()
-    roleSlug?: string;
+    @IsEnum(UserRole)
+    role?: UserRole;
 
     @ApiPropertyOptional({ description: 'Подтверждён ли' })
     @IsOptional()

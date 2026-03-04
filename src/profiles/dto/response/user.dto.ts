@@ -18,7 +18,7 @@ export class UserResponseDto {
     organizationId: string | null;
 
     @ApiProperty({ enum: UserRole })
-    roleSlug: UserRole;
+    role: UserRole;
 
     @ApiPropertyOptional()
     photoId: string | null;

@@ -9,7 +9,7 @@ export interface IUser {
     lastName: string;
     middleName: string | null;
     organizationId: string | null;
-    roleSlug: UserRole;
+    role: UserRole;
     photoId: string | null;
     isConfirmed: boolean;
     confirmedBy: string | null;
