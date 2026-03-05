@@ -8,6 +8,7 @@ export interface UserRegisteredData {
     middle_name?: string;
     role: UserRole;
     email: string;
+    phone: string;
 }
 
 export class UserRegisteredEventContract implements IBaseEventContract<UserRegisteredData> {
