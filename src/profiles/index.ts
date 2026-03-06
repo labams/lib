@@ -15,6 +15,7 @@ export * from './contracts/events/profile-organization-created.event';
 export * from './contracts/events/profile-organization-validated.event';
 export * from './contracts/events/profile-user-org-changed.event';
 export * from './contracts/events/profile-patient-created.event';
+export * from './contracts/events/profile-event.types';
 
 // RPC contracts
 export * from './contracts/rpc/get-user.rpc';

@@ -5,6 +5,11 @@ export * from './types/notification.types';
 export * from './dto/index';
 
 // Event contracts
+export * from './contracts/events/notification-send.event';
 export * from './contracts/events/notification-sent.event';
 export * from './contracts/events/notification-failed.event';
 export * from './contracts/events/notification-event.types';
+
+// RPC contracts
+export * from './contracts/rpc/send-notification.rpc';
+export * from './contracts/rpc/get-user-settings.rpc';
