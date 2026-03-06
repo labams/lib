@@ -11,7 +11,13 @@ export class UserNotificationSettingsResponseDto {
     email: string | null;
 
     @ApiProperty({ nullable: true })
-    phone: string | null;
+    phoneNumber: string | null;
+
+    @ApiProperty({ nullable: true })
+    phoneCountry: string | null;
+
+    @ApiProperty({ nullable: true })
+    phoneRegion: string | null;
 
     @ApiProperty({ nullable: true })
     telegramChatId: string | null;
