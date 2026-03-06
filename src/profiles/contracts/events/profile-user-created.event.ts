@@ -6,7 +6,9 @@ export interface ProfileUserCreatedData {
     role_slug: UserRole;
     organization_id: string | null;
     email: string;
-    phone: string;
+    phoneNumber: string;
+    phoneCountry: string;
+    phoneRegion?: string;
 }
 
 export class ProfileUserCreatedEventContract implements IBaseEventContract<ProfileUserCreatedData> {
